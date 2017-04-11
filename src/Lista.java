@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,6 +21,14 @@ public class Lista {
 
         }while ( numbers>=0);
 
-        System.out.println(list.);
+        System.out.println(list.toString());
+
+        File file = new File("txt");
+        try {
+            Scanner scanner = Scanner(file);
+            while (scanner.hasNextInt());
+
+        }
+
     }
 }
