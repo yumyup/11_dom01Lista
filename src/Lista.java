@@ -1,4 +1,4 @@
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Helmut on 2017-04-11.
  */
 public class Lista {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ArrayList<Integer> list = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
@@ -19,16 +19,16 @@ public class Lista {
             } else
                 list.add(numbers);
 
-        }while ( numbers>=0);
+        } while (numbers >= 0);
 
         System.out.println(list.toString());
 
-        File file = new File("txt");
-        try {
-            Scanner scanner = Scanner(file);
-            while (scanner.hasNextInt());
-
-        }
+        FileWriter fileWriter = new FileWriter("text.txt");
+        BufferedWriter bfw = new BufferedWriter(fileWriter);
+        bfw.write();
+        bfw.close();
 
     }
+
 }
+
