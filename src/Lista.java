@@ -25,7 +25,7 @@ public class Lista {
 
         FileWriter fileWriter = new FileWriter("text.txt");
         BufferedWriter bfw = new BufferedWriter(fileWriter);
-        bfw.write();
+        bfw.write(numbers);
         bfw.close();
 
     }
