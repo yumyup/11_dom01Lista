@@ -21,13 +21,19 @@ public class Lista {
 
         } while (numbers >= 0);
 
+        String fileName = "text.txt";
         System.out.println(list.toString());
+        try (
+                FileWriter fileWriter = new FileWriter(fileName);
+                BufferedWriter bfw = new BufferedWriter(fileWriter);
+        ) {
+            bfw.write(numbers);
+            bfw.newLine();
+            bfw.close();
 
-        FileWriter fileWriter = new FileWriter("text.txt");
-        BufferedWriter bfw = new BufferedWriter(fileWriter);
-        bfw.write(numbers);
-        bfw.close();
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
